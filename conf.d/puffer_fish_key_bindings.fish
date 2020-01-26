@@ -1,7 +1,7 @@
-bind . _expanddots
+bind . _puffer_fish_expand_dots
 
-set -l uninstall_event_name (basename (status -f) .fish){_uninstall}
+set -l uninstall_event (basename (status -f) .fish){_uninstall}
 
-function $uninstall_event_name --on-event $uninstall_event_name
+function $uninstall_event --on-event $uninstall_event
     bind -e .
 end
