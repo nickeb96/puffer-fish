@@ -10,3 +10,5 @@ To install with [fisher](https://github.com/jorgebucaran/fisher "fish package ma
 ```shell
 fisher add nickeb96/puffer-fish
 ```
+
+To install it manually, just copy the file in *cond.d/* to your local conf.d directory.  Also copy the two files in *functions/* to your local fish functions directory.  These directories are in *~/.config/fish* by default, you can create them if they don't already exist.
