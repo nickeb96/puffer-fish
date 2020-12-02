@@ -1,5 +1,4 @@
-Text Expansions for the Fish Shell
-==================================
+# Text Expansions for Fish
 
 Typing consecutive dots after `..` will automatically expand to `../..`, then `../../..` and so on.  It expands in place as you type to allow directory tab-completion to work.  This can be useful with any command where you want to reference a parent directory that is more than one back.  i.e. `cd ....` or `vi .../Cargo.toml`.
 
@@ -22,10 +21,9 @@ This can be especially useful if you don't want to retype a long command, or nav
 ...
 ```
 
-Installation
-------------
+## Installation
 
-To install with [fisher](https://github.com/jorgebucaran/fisher "fish package manager") run the following:
+Install with [Fisher](https://github.com/jorgebucaran/fisher "fish plugin manager"):
 
 ```console
 > fisher install nickeb96/puffer-fish
@@ -33,4 +31,8 @@ To install with [fisher](https://github.com/jorgebucaran/fisher "fish package ma
 
 #### Manually
 
-Just copy the file in *cond.d/* to your local conf.d directory.  Also copy the two files in *functions/* to your local fish functions directory.  These directories are in *~/.config/fish* by default, you can create them if they don't already exist.
+Just copy `functions/*` and `conf.d/*` to your `$__fish_config_dir` directory. Make sure to create them if they don't already exist.
+
+## LICENSE
+
+[MIT](LICENSE)
