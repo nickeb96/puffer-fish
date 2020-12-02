@@ -4,7 +4,7 @@
 
 Typing consecutive dots after `..` will automatically expand to `../..`, then `../../..` and so on.  It expands in place as you type to allow directory tab-completion to work.  This can be useful with any command where you want to reference a parent directory that is more than one back.  i.e. `cd ....` or `vi .../Cargo.toml`.
 
-![dot dot demo](./dot-dot-demo.gif)
+![dot dot demo](./media/dot-dot-demo.gif)
 
 It's a little hard to see in the demo because it expands as you type, but `cp ..../template/Makefile .` is being typed.
 
@@ -12,7 +12,7 @@ It's a little hard to see in the demo because it expands as you type, but `cp ..
 
 Typing `!!` will expand to the previous command, similar to Zsh, Bash, and other shells.  For example, if you type `apt update` you will likely see a permisison error.  You can then type `sudo !!` and it will expand to `sudo apt update`.
 
-![exclamation demo](./exclamation-demo.gif)
+![exclamation demo](./media/exclamation-demo.gif)
 
 This can be especially useful if you don't want to retype a long command, or navigate around with the arrow keys.  Or if you want to re-run a command as part of pipeline.
 
