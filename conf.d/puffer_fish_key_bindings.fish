@@ -12,9 +12,9 @@ end
 
 _puffer_fish_key_bindings
 
-set -l uninstall_event (basename (status -f) .fish)_uninstall
+set -l uninstall_event puffer_fish_key_bindings_uninstall
 
-function $uninstall_event --on-event $uninstall_event
+function _$uninstall_event --on-event $uninstall_event
     bind -e .
     bind -e !
 end
