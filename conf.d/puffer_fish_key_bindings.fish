@@ -1,6 +1,7 @@
 status is-interactive || exit
 
 function _puffer_fish_key_bindings --on-variable fish_key_bindings
+    set -l modes
     if test "$fish_key_bindings" = fish_default_key_bindings
         set modes default insert
     else
