@@ -28,7 +28,7 @@ This can be especially useful if you don't want to retype a long command, or nav
 Install with [Fisher](https://github.com/jorgebucaran/fisher "fish plugin manager"):
 
 ```console
-> fisher install nickeb96/puffer-fish
+fisher install nickeb96/puffer-fish
 ```
 
 #### Manually
