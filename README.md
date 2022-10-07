@@ -23,6 +23,17 @@ This can be especially useful if you don't want to retype a long command, or nav
 ...
 ```
 
+--------------------------------------------------------------------------------
+
+Typing `!$` will expand to the last argument.  For example, if you searched packages with pacman and found nothing, you'd like to also search in the AUR.
+
+```console
+> pacman -Ss something
+...
+> paru -Ss !$
+...
+```
+
 ## Installation
 
 Install with [Fisher](https://github.com/jorgebucaran/fisher "fish plugin manager"):
