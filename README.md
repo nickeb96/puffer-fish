@@ -34,6 +34,17 @@ Typing `!$` will expand to the last argument.  For example, if you searched pack
 ...
 ```
 
+--------------------------------------------------------------------------------
+
+Typing `!*` will expand to all arguments.  For example, if you created some directories and then wanted to run chmod on them.
+
+```console
+> mkdir /tmp/a /tmp/b /tmp/c
+...
+> chmod 700 !*
+...
+```
+
 ## Installation
 
 Install with [Fisher](https://github.com/jorgebucaran/fisher "fish plugin manager"):
