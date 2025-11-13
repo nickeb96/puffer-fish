@@ -1,14 +1,10 @@
 function _puffer_fish_expand_lastarg
-    set -l current_token (commandline -t)
-    if not test (count $current_token) -eq 1
-        commandline -i '$'
-        return
-    end
-    switch (commandline -t)
-      case '!'
-        commandline -t ""
+    if commandline --search-field >/dev/null
+        commandline --search-field --insert '$'
+    else if string match --quiet '!' -- "$(commandline --current-token)"
+        commandline --current-token ''
         commandline -f history-token-search-backward
-      case '*'
-        commandline -i '$'
+    else
+        commandline --insert '$'
     end
 end

@@ -10,17 +10,16 @@ It's a little hard to see in the demo because it expands as you type, but `cp ..
 
 --------------------------------------------------------------------------------
 
-Typing `!!` will expand to the previous command, similar to Zsh, Bash, and other shells.  For example, if you type `apt update` you will likely see a permisison error.  You can then type `sudo !!` and it will expand to `sudo apt update`.
+Typing `!!` will expand to the previous command, similar to Zsh, Bash, and other shells.  For example, if you type `apt update` you will likely see a permission error.  You can then type `sudo !!` and it will expand to `sudo apt update`.
 
 ![exclamation demo](./media/exclamation-demo.gif)
 
 This can be especially useful if you don't want to retype a long command, or navigate around with the arrow keys.  Or if you want to re-run a command as part of pipeline.
 
 ```console
-> some-long-command -abcdef --long-option --another-long-option /a/long/path/to/somewhere
-...
-> cat file1 file2 | !! | grep 'search-key' | wrap -s
-...
+some-long-command -abcdef --long-option --another-long-option /a/long/path/to/somewhere
+
+cat file1 file2 | !! | grep 'search-key' | wrap -s
 ```
 
 --------------------------------------------------------------------------------
@@ -28,10 +27,9 @@ This can be especially useful if you don't want to retype a long command, or nav
 Typing `!$` will expand to the last argument.  For example, if you searched packages with pacman and found nothing, you'd like to also search in the AUR.
 
 ```console
-> pacman -Ss something
-...
-> paru -Ss !$
-...
+pacman -Ss something
+
+paru -Ss !$
 ```
 
 --------------------------------------------------------------------------------
@@ -39,10 +37,9 @@ Typing `!$` will expand to the last argument.  For example, if you searched pack
 Typing `!*` will expand to all arguments.  For example, if you created some directories and then wanted to run chmod on them.
 
 ```console
-> mkdir /tmp/a /tmp/b /tmp/c
-...
-> chmod 700 !*
-...
+mkdir /tmp/a /tmp/b /tmp/c
+
+chmod 700 !*
 ```
 
 ## Installation
@@ -53,9 +50,9 @@ Install with [Fisher](https://github.com/jorgebucaran/fisher "fish plugin manage
 fisher install nickeb96/puffer-fish
 ```
 
-#### Manually
+#### Manually:
 
-Just copy `functions/*` and `conf.d/*` to your `$__fish_config_dir` directory. Make sure to create them if they don't already exist.
+Copy `functions/*` and `conf.d/*` to your `$__fish_config_dir` directory. Make sure to create them if they don't already exist.
 
 ## LICENSE
 
