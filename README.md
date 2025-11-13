@@ -16,7 +16,7 @@ Typing `!!` will expand to the previous command, similar to Zsh, Bash, and other
 
 This can be especially useful if you don't want to retype a long command, or navigate around with the arrow keys.  Or if you want to re-run a command as part of pipeline.
 
-```console
+```fish
 some-long-command -abcdef --long-option --another-long-option /a/long/path/to/somewhere
 
 cat file1 file2 | !! | grep 'search-key' | wrap -s
@@ -26,7 +26,7 @@ cat file1 file2 | !! | grep 'search-key' | wrap -s
 
 Typing `!$` will expand to the last argument.  For example, if you searched packages with pacman and found nothing, you'd like to also search in the AUR.
 
-```console
+```fish
 pacman -Ss something
 
 paru -Ss !$
@@ -36,7 +36,7 @@ paru -Ss !$
 
 Typing `!*` will expand to all arguments.  For example, if you created some directories and then wanted to run chmod on them.
 
-```console
+```fish
 mkdir /tmp/a /tmp/b /tmp/c
 
 chmod 700 !*
@@ -46,7 +46,7 @@ chmod 700 !*
 
 Install with [Fisher](https://github.com/jorgebucaran/fisher "fish plugin manager"):
 
-```console
+```fish
 fisher install nickeb96/puffer-fish
 ```
 
