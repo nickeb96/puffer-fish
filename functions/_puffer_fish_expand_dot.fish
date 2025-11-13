@@ -1,4 +1,4 @@
-function _puffer_fish_expand_dots
+function _puffer_fish_expand_dot
     if commandline --search-field >/dev/null
         commandline --search-field --insert '.'
     else if string match --quiet --regex -- '^(\.\./)*\.\.$' "$(commandline --current-token)"

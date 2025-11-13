@@ -1,4 +1,4 @@
-function _puffer_fish_expand_args
+function _puffer_fish_expand_star
     if commandline --search-field >/dev/null
         commandline --search-field --insert '*'
     else if string match --quiet -- '!' "$(commandline --current-token)"

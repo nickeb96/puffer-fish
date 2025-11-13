@@ -8,10 +8,10 @@ function _puffer_fish_key_bindings --on-variable fish_key_bindings
         set modes insert default
     end
 
-    bind --mode $modes[1] '.' _puffer_fish_expand_dots
+    bind --mode $modes[1] '.' _puffer_fish_expand_dot
     bind --mode $modes[1] '!' _puffer_fish_expand_bang
-    bind --mode $modes[1] '$' _puffer_fish_expand_lastarg
-    bind --mode $modes[1] '*' _puffer_fish_expand_args
+    bind --mode $modes[1] '$' _puffer_fish_expand_buck
+    bind --mode $modes[1] '*' _puffer_fish_expand_star
     bind --mode $modes[2] --erase '.' '!' '$' '*'
 end
 
