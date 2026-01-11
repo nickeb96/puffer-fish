@@ -54,6 +54,18 @@ fisher install nickeb96/puffer-fish
 
 Copy `functions/*` and `conf.d/*` to your `$__fish_config_dir` directory. Make sure to create them if they don't already exist.
 
+## Development
+
+To test out changes to these scripts, you can create a temp dir and have fish load the config from there:
+
+```fish
+set temp /tmp/puffer-fish
+mkdir -p $temp/fish/
+ln -s (pwd)/{conf.d,functions} $temp/fish/
+
+XDG_CONFIG_HOME=$temp fish
+```
+
 ## LICENSE
 
 [MIT](LICENSE)
