@@ -12,7 +12,8 @@ function _puffer_fish_key_bindings --on-variable fish_key_bindings
     bind --mode $modes[1] '!' _puffer_fish_expand_bang
     bind --mode $modes[1] '$' _puffer_fish_expand_buck
     bind --mode $modes[1] '*' _puffer_fish_expand_star
-    bind --mode $modes[2] --erase '.' '!' '$' '*'
+    bind --mode $modes[1] '^' _puffer_fish_expand_caret
+    bind --mode $modes[2] --erase '.' '!' '$' '*' '^'
 end
 
 _puffer_fish_key_bindings
@@ -24,4 +25,5 @@ function _$uninstall_event --on-event $uninstall_event
     bind -e '!'
     bind -e '$'
     bind -e '*'
+    bind -e '^'
 end
